@@ -1,0 +1,8 @@
+Demandez à l'utilisateur de saisir une année.
+Vérifiez si l'année est divisible par 4.
+Si elle l'est, vérifiez si elle est divisible par 100 :
+Si elle est divisible par 100, vérifiez si elle est également divisible par 400 :
+Si c'est le cas, l'année est bissextile.
+Sinon, l'année n'est pas bissextile.
+Sinon, si elle n'est pas divisible par 100, l'année est bissextile.
+Si l'année n'est pas divisible par 4, elle n'est pas bissextile.

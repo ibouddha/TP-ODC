@@ -1,0 +1,23 @@
+Début
+
+    // Initialiser la variable pour stocker le plus grand nombre et son rang
+    plus_grand = -100
+    rang_plus_grand = 0
+    
+    // Boucle pour saisir les 10 nombres et trouver le plus grand
+    Pour i allant de 1 à 10 faire
+        // Demander à l'utilisateur de saisir un nombre
+        Afficher "Entrez le nombre ", i, " : "
+        Lire nombre
+        
+        // Vérifier si ce nombre est plus grand que celui déjà enregistré
+        Si nombre > plus_grand alors
+            plus_grand = nombre
+            rang_plus_grand = i
+        Fin Si
+    Fin Pour
+    
+    // Afficher le plus grand nombre et son rang dans la liste saisie
+    Afficher "Le plus grand nombre est ", plus_grand, " et son rang dans la liste est ", rang_plus_grand
+
+Fin

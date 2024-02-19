@@ -1,0 +1,47 @@
+Copy code
+Constante : ANNEE_COURANTE = 2023
+
+Type Etudiant :
+- nom : Chaîne de caractères
+- prénom : Chaîne de caractères
+- dateDeNaissance : Enregistrement with fields jour, mois, année
+- fonction : Chaîne de caractères
+Fin Type
+
+Variable :
+- étudiant : Etudiant
+- age : Entier
+Début
+
+Ecrire("Saisie des données de l'étudiant")
+
+Ecrire("Nom : ")
+Lire étudiant.nom
+
+Ecrire("Prénom : ")
+Lire étudiant.prénom
+
+Ecrire("Jour de naissance : ")
+Lire étudiant.dateDeNaissance.jour
+
+Ecrire("Mois de naissance : ")
+Lire étudiant.dateDeNaissance.mois
+
+Ecrire("Année de naissance : ")
+Lire étudiant.dateDeNaissance.année
+
+Ecrire("Fonction : ")
+Lire étudiant.fonction
+
+Calculer l'age
+age = ANNEE_COURANTE - étudiant.dateDeNaissance.année
+
+Si étudiant.dateDeNaissance.mois < MOIS_COURANT ou (étudiant.dateDeNaissance.mois = MOIS_COURANT et étudiant.dateDeNaissance.jour <= JOUR_COURANT) Alors
+  age = age
+Sinon
+  age = age - 1
+Fin Si
+
+Ecrire("L'âge de l'étudiant est de : ", age)
+
+Fin

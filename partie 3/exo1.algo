@@ -1,0 +1,32 @@
+Début
+
+    // Fonction pour vérifier si un nombre est parfait
+    Fonction est_nombre_parfait(n)
+        somme_diviseurs = 0
+        //parcourir les nombres de 0 à n-1 pour voir quels sont les nombres divisibles par  n
+        Pour chaque diviseur d de 1 à n-1 faire
+            Si n modulo d est égal à 0 alors
+                //faire la somme des diviseurs 
+                somme_diviseurs = somme_diviseurs + d
+            Fin Si
+        Fin Pour
+        //vérifier si la somme des diviseurs est égale à n, sinon c'est pas un nombre parf
+        Si somme_diviseurs est égal à n alors
+            retourner Vrai // n est un nombre parfait
+        Sinon
+            retourner Faux // n n'est pas un nombre parfait
+        Fin Si
+    Fin Fonction
+
+    // Saisie de l'entier naturel à vérifier
+    Afficher "Entrez un entier naturel : "
+    Lire nombre
+
+    // Appel de la fonction pour vérifier si le nombre est parfait
+    Si est_nombre_parfait(nombre) alors
+        Afficher nombre, "est un nombre parfait." // Afficher si le nombre est parfait
+    Sinon
+        Afficher nombre, "n'est pas un nombre parfait." // Afficher si le nombre n'est pas parfait
+    Fin Si
+
+Fin

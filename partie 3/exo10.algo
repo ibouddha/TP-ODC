@@ -1,0 +1,42 @@
+Début
+
+    // Fonction pour calculer la somme des diviseurs d'un nombre
+    Fonction somme_diviseurs(nombre)
+        somme = 1  // Initialiser la somme à 1 car 1 est toujours un diviseur
+
+        // Parcourir les entiers de 2 à la moitié du nombre
+        Pour chaque diviseur de 2 à nombre / 2 faire
+            Si nombre est divisible par le diviseur alors
+                somme = somme + diviseur
+            Fin Si
+        Fin Pour
+
+        Renvoyer somme
+    Fin Fonction
+
+    // Fonction pour vérifier si deux nombres sont amis
+    Fonction sont_amis(nombre1, nombre2)
+        somme1 = somme_diviseurs(nombre1)
+        somme2 = somme_diviseurs(nombre2)
+
+        Si somme1 est égal à nombre2 et somme2 est égal à nombre1 alors
+            Renvoyer Vrai
+        Sinon
+            Renvoyer Faux
+        Fin Si
+    Fin Fonction
+
+    // Saisie des deux nombres à tester
+    Afficher "Entrez le premier nombre : "
+    Lire nombre1
+    Afficher "Entrez le deuxième nombre : "
+    Lire nombre2
+
+    // Vérification si les nombres sont amis ou non
+    Si sont_amis(nombre1, nombre2) alors
+        Afficher nombre1, "et", nombre2, "sont des nombres amis."
+    Sinon
+        Afficher nombre1, "et", nombre2, "ne sont pas des nombres amis."
+    Fin Si
+
+Fin

@@ -1,0 +1,38 @@
+Début
+
+    // Saisie du nombre de départ
+    Afficher "Entrez un nombre de départ : "
+    Lire nombre_de_depart
+
+    somme = 0
+    
+    // Calcul de la somme des entiers jusqu'au nombre de départ
+    Pour chaque entier i de 1 à nombre_de_depart faire
+        somme = somme + i
+    Fin Pour
+    
+    // Affichage de la somme
+    Afficher "La somme des entiers jusqu'à", nombre_de_depart, "est :", somme
+
+Fin
+
+Début
+
+    // Saisie du nombre de départ
+    Afficher "Entrez un nombre de départ : "
+    Lire nombre_de_depart
+
+    somme = 0
+    
+    // Calcul de la somme des entiers jusqu'au nombre de départ
+    Pour chaque entier i de 1 à nombre_de_depart faire
+        somme = somme + i
+    Fin Pour
+    
+    // Calcul de la moyenne
+    moyenne = somme / nombre_de_depart
+    
+    // Affichage de la moyenne
+    Afficher "La moyenne des entiers jusqu'à", nombre_de_depart, "est :", moyenne
+
+Fin

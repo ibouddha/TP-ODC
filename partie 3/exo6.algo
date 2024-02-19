@@ -1,0 +1,20 @@
+Debut
+    somme = 0
+    prix_article = 0
+
+    //Démarrer la boucle de saisie des nombres*
+    tant que prix_article != -1 faire
+        //Saisir le prix d'un article
+        afficher ("Entrez le prix d'un article : ")
+        lire(prix_article)
+        si  prix_article mod 10 = 0 alors
+            somme <-  somme + prix_article
+        sinon
+            afficher( "Le prix doit se terminer par un 0.")
+        finsi
+    fin tantque
+
+    //afficher la somme total des articles
+    afficher("La somme totale est de ",somme," €")
+
+fin

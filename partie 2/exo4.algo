@@ -1,0 +1,42 @@
+Début
+
+    // Demander à l'utilisateur d'entrer le montant en euros
+    Afficher "Entrez le montant en euros : "
+    Lire montant
+
+    // Initialiser les variables pour compter le nombre de billets et de pièces
+    billet20 = 0
+    billet10 = 0
+    billet5 = 0
+    piece2 = 0
+    piece1 = 0
+
+    // Décomposer le montant en utilisant le plus grand billet ou pièce possible à chaque étape
+    Tant que montant est supérieur à 0 alors
+        Si montant est supérieur ou égal à 20 alors
+            billet20 = montant / 20
+            montant = montant % 20
+        Sinon si montant est supérieur ou égal à 10 alors
+            billet10 = montant / 10
+            montant = montant % 10
+        Sinon si montant est supérieur ou égal à 5 alors
+            billet5 = montant / 5
+            montant = montant % 5
+        Sinon si montant est supérieur ou égal à 2 alors
+            piece2 = montant / 2
+            montant = montant % 2
+        Sinon
+            piece1 = montant
+            montant = 0
+        Fin Si
+    Fin Tant que
+
+    // Afficher la décomposition du montant en billets et pièces
+    Afficher "Décomposition du montant : "
+    Afficher "Billets de 20 euros :", billet20
+    Afficher "Billets de 10 euros :", billet10
+    Afficher "Billets de 5 euros :", billet5
+    Afficher "Pièces de 2 euros :", piece2
+    Afficher "Pièces de 1 euro :", piece1
+
+Fin

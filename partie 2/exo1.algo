@@ -1,0 +1,35 @@
+Début
+
+    // Demander à l'utilisateur de choisir entre série ou parallèle
+    Afficher "Entrez 1 pour calculer la résistance en série ou 2 pour calculer la résistance en parallèle : "
+    Lire choix
+
+    Si choix est égal à 1 alors
+        // Demander à l'utilisateur d'entrer les valeurs des résistances pour le calcul en série
+        Afficher "Entrez la valeur de R1 : "
+        Lire R1
+        Afficher "Entrez la valeur de R2 : "
+        Lire R2
+        Afficher "Entrez la valeur de R3 : "
+        Lire R3
+        // Calculer la résistance en série
+        Calculer résistance_série = R1 + R2 + R3
+        // Afficher le résultat
+        Afficher "La résistance en série est de :", résistance_série
+    Sinon si choix est égal à 2 alors
+        // Demander à l'utilisateur d'entrer les valeurs des résistances pour le calcul en parallèle
+        Afficher "Entrez la valeur de R1 : "
+        Lire R1
+        Afficher "Entrez la valeur de R2 : "
+        Lire R2
+        Afficher "Entrez la valeur de R3 : "
+        Lire R3
+        // Calculer la résistance en parallèle
+        Calculer résistance_parallèle = (R1 * R2 * R3) / (R1*R2 + R2*R3 + R1*R3)
+        // Afficher le résultat
+        Afficher "La résistance en parallèle est de :", résistance_parallèle
+    Sinon
+        // Afficher un message d'erreur si le choix n'est pas valide
+        Afficher "Choix non valide. Veuillez entrer 1 ou 2."
+
+Fin

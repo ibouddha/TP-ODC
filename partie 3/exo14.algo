@@ -1,0 +1,30 @@
+Début
+
+    // Fonction pour vérifier si un nombre est premier
+    Fonction est_premier(nombre)
+        Si nombre est inférieur à 2 alors
+            Renvoyer Faux
+        Fin Si
+        
+        Pour chaque diviseur de 2 à la racine carrée de nombre faire
+            Si nombre est divisible par le diviseur alors
+                Renvoyer Faux
+            Fin Si
+        Fin Pour
+        
+        Renvoyer Vrai
+    Fin Fonction
+
+    // Saisie de l'entier positif N
+    Afficher "Entrez un entier positif N : "
+    Lire N
+
+    // Affichage des nombres premiers entre 1 et N
+    Afficher "Les nombres premiers entre 1 et", N, "sont :"
+    Pour chaque nombre de 1 à N faire
+        Si est_premier(nombre) alors
+            Afficher nombre
+        Fin Si
+    Fin Pour
+
+Fin

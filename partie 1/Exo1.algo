@@ -1,0 +1,8 @@
+recuperation de l'entier a
+recuperation de l'entier b
+verifier si le nombre entier b est positif et different de 0 a div b
+si oui, on divise a par b et on stocke le resultat dans c avec A
+et on recupere le reste de la division avec l'operateur de modulo et on le stocke dans r
+sinon on affiche le message  "le nombre n'est pas valide" et on arrete le programme.
+ensuite pour le ratio des nombres, on fait la division reelle de a par b avec a/b et on stocke le reste de la division dans s grace a l'operateur modulo.
+fin

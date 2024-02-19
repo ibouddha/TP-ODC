@@ -1,0 +1,6 @@
+recuperation de la mesure en dm et l'affecter à la variable mesure.
+affichage en metre sera la valeur de la variable mesure divisée par 10
+affichage en milimetre est la multiplication de la variable mesure par 100
+affichage en centimetre est la multiplication de la variable mesure par 10
+affichage en hectometre est la division de la variable mesure par 1000
+fin

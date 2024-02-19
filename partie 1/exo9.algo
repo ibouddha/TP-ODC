@@ -1,0 +1,27 @@
+variable heure_dep, min_arr, heure_arr, min_dep:entier
+debut:
+    //Demander à l'utilisateur d'entrer l'heure de départ (heure et minute).
+    afficher "donnez l'heure de depart et les minutes de depart"
+    //Lire et stocker l'heure de départ (heure_dep) et les minutes de départ (min_dep).
+    lire heure_dep
+    lire min_dep
+    //Demander à l'utilisateur d'entrer l'heure d'arrivée (heure et minute).
+    afficher "donnez l'heure d'arrivée et les minutes d'arrivée"
+    //Lire et stocker l'heure d'arrivée (heure_arr) et les minutes d'arrivée (min_arr).
+    lire heure_arr
+    lire min_arr
+    //Calculer la durée de vol en heures et en minutes :
+    //a. Si l'heure d'arrivée est supérieure à l'heure de départ, calculer la différence directement.
+    si heure_arr > heure_dep alors
+        diff_h := heure_arr - heure_dep
+        diff_m := min_arr - min_dep
+    sinon si min_arr >= min_dep alors
+        diff_h := 0
+        diff_m := min_arr - min_dep
+    //b. Sinon, ajouter 24 heures à l'heure d'arrivée pour obtenir une heure valide, puis calculer la différence.
+    sinon
+        diff_h := 24 - heure_dep + heure_arr
+        diff_m := 60 - min_dep + min_arr
+    //Afficher la durée de vol en heures et en minutes.
+    afficher "le vol dure ",diff_h,"heures et ",diff_m
+fin

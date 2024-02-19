@@ -1,0 +1,42 @@
+Début
+
+    // Fonction pour vérifier si un nombre est premier
+    Fonction est_premier(nombre)
+        Si nombre est inférieur à 2 alors
+            Renvoyer Faux
+        Fin Si
+        
+        Pour chaque diviseur de 2 à la racine carrée de nombre faire
+            Si nombre est divisible par le diviseur alors
+                Renvoyer Faux
+            Fin Si
+        Fin Pour
+        
+        Renvoyer Vrai
+    Fin Fonction
+
+    // Initialisation des compteurs
+    total_entiers = 0
+    total_premiers = 0
+    nombres_premiers = []
+
+    // Saisie des nombres premiers jusqu'à ce que l'utilisateur tape zéro
+    Tant que Vrai faire
+        Afficher "Entrez un nombre premier (0 pour arrêter) : "
+        Lire nombre
+        Si nombre est égal à 0 alors
+            Sortir de la boucle
+        Fin Si
+        total_entiers = total_entiers + 1
+        Si est_premier(nombre) alors
+            total_premiers = total_premiers + 1
+            Ajouter nombre à la liste nombres_premiers
+        Fin Si
+    Fin Tant que
+
+    // Affichage des résultats
+    Afficher "Nombre total d'entiers saisis :", total_entiers
+    Afficher "Nombre total de nombres premiers :", total_premiers
+    Afficher "Nombres premiers saisis :", nombres_premiers
+
+Fin

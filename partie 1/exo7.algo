@@ -1,0 +1,7 @@
+recuperer la resistance R1
+recuperer la resistance R2
+recuperer la resistance R3
+affecter à la variable série, le résultat de l'addition des resistances R1, R2 et R3.
+affecter à la variable parallele, le résultat de l'operation (R1 * R2 * R3) / (R1*R2 + 
+R2*R3 + R1*R3) 
+afficher les resultats des operations

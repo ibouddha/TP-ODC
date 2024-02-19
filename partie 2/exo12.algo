@@ -1,0 +1,27 @@
+Début
+
+    // Saisie de la date (jour, mois, année)
+    Afficher "Entrez le jour : "  
+    Lire jour
+    Afficher "Entrez le mois : "
+    Lire mois
+    Afficher "Entrez l'année : "
+    Lire annee
+
+    // Saisie du nombre de jours à remonter
+    Afficher "Entrez le nombre de jours à remonter : "
+    Lire N
+
+    // Vérifier que le nombre de jours est positif
+    Si N >= 0 alors
+        // Appeler la fonction pour obtenir la date précédente
+        date_precedente = date_ancienne(jour, mois, annee, N)
+        
+        // Afficher la date précédente
+        Afficher "La date il y a", N, "jours était le", date_precedente
+    Sinon
+        Afficher "Le nombre de jours doit être positif."
+    Fin Si
+
+Fin
+

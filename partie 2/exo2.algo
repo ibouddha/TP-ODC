@@ -1,0 +1,37 @@
+Début
+
+    // Demander à l'utilisateur de saisir le premier entier (a)
+    Afficher "Entrez le premier entier (a) : "
+    Lire a
+
+    // Demander à l'utilisateur de saisir l'opération
+    Afficher "Entrez l'opération (+, -, *, /) : "
+    Lire operation
+
+    // Demander à l'utilisateur de saisir le deuxième entier (b)
+    Afficher "Entrez le deuxième entier (b) : "
+    Lire b
+
+    // Vérifier l'opération et effectuer le calcul approprié
+    Si operation est égal à "+" alors
+        resultat = a + b
+    Sinon si operation est égal à "-" alors
+        resultat = a - b
+    Sinon si operation est égal à "*" alors
+        resultat = a * b
+    Sinon si operation est égal à "/" alors
+        // Vérifier si le dénominateur est différent de zéro pour éviter une division par zéro
+        Si b est différent de 0 alors
+            resultat = a / b
+        Sinon
+            Afficher "Erreur : Division par zéro"
+            Fin
+        Fin si
+    Sinon
+        // Afficher un message d'erreur si l'opération n'est pas valide
+        Afficher "Opération non valide"
+
+    // Afficher le résultat
+    Afficher "Le résultat de l'opération est :", resultat
+
+Fin

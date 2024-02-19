@@ -1,0 +1,29 @@
+Debut
+    //récupérer le nombre à deviner
+    afficher("Donnez le nombre à deviner")
+    lire entier_a_deviner
+
+    // Initialiser le compteur de tentatives
+    tentatives = 0
+
+    // Boucle jusqu'à ce que l'entier soit deviné
+    Tant que deviné est faux faire
+        // Demander au second joueur de saisir une proposition
+        Afficher "Devinez l'entier (entre 1 et 100) : "
+        Lire proposition
+        
+        // Incrémenter le compteur de tentatives
+        tentatives = tentatives + 1
+        
+        // Vérifier si la proposition est égale à l'entier à deviner
+        Si proposition est égal à entier_a_deviner alors
+            Afficher "Bravo ! Vous avez deviné l'entier en", tentatives, "tentatives."
+            deviné = vrai
+        Sinon si proposition est plus petit que entier_a_deviner alors
+            Afficher "L'entier à deviner est plus grand."
+        Sinon
+            Afficher "L'entier à deviner est plus petit."
+        Fin Si
+    Fin Tant que
+
+Fin

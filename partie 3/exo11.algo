@@ -1,0 +1,29 @@
+Début
+
+    // Fonction pour vérifier si un nombre est premier
+    Fonction est_premier(nombre)
+        Si nombre est égal à 1 alors
+            Renvoyer Faux  // 1 n'est pas un nombre premier
+        Fin Si
+        
+        Pour chaque diviseur de 2 à la racine carrée de nombre faire
+            Si nombre est divisible par le diviseur alors
+                Renvoyer Faux  // Si nombre est divisible par un autre nombre que 1 et lui-même, il n'est pas premier
+            Fin Si
+        Fin Pour
+        
+        Renvoyer Vrai  // Si aucun diviseur autre que 1 et lui-même n'a été trouvé, nombre est premier
+    Fin Fonction
+
+    // Saisie du nombre à tester
+    Afficher "Entrez un nombre entier positif : "
+    Lire nombre
+
+    // Vérification si le nombre est premier
+    Si est_premier(nombre) alors
+        Afficher nombre, " est un nombre premier."
+    Sinon
+        Afficher nombre, " n'est pas un nombre premier."
+    Fin Si
+
+Fin

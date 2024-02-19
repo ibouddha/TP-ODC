@@ -1,0 +1,32 @@
+Début
+
+    // Demander à l'utilisateur de saisir les coefficients de l'équation
+    Afficher "Entrez le coefficient a : "
+    Lire a
+    Afficher "Entrez le coefficient b : "
+    Lire b
+    Afficher "Entrez le coefficient c : "
+    Lire c
+
+    // Calculer le discriminant
+    delta = b^2 - 4*a*c
+
+    // Si le discriminant est positif
+    Si delta > 0 alors
+        // Calculer les deux racines réelles distinctes
+        racine1 = (-b + sqrt(delta)) / (2*a)
+        racine2 = (-b - sqrt(delta)) / (2*a)
+        Afficher "Les racines de l'équation sont :", racine1, "et", racine2
+    // Si le discriminant est nul
+    Sinon si delta = 0 alors
+        // Calculer la racine double
+        racine = -b / (2*a)
+        Afficher "L'unique racine de l'équation est :", racine
+    // Si le discriminant est négatif
+    Sinon
+        // Calculer les parties réelle et imaginaire des racines complexes
+        partie_reelle = -b / (2*a)
+        partie_imaginaire = sqrt(abs(delta)) / (2*a)
+        Afficher "Les racines de l'équation sont :", partie_reelle, "+", partie_imaginaire, "i et", partie_reelle, "-", partie_imaginaire, "i"
+
+Fin

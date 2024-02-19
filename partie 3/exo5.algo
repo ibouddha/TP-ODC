@@ -1,0 +1,30 @@
+Début
+
+    // Fonction pour calculer le PPCM de deux entiers
+    Fonction ppcm(a, b)
+        // Calcul du PPCM en utilisant la formule : PPCM(a, b) = (a * b) / PGCD(a, b)
+        retourner (a * b) / pgcd(a, b)
+    Fin Fonction
+
+    // Fonction pour calculer le PGCD de deux entiers
+    Fonction pgcd(a, b)
+        // Calcul du PGCD en utilisant l'algorithme d'Euclide
+        Tant que b est différent de 0 faire
+            a, b = b, a % b
+        Fin Tant que
+        retourner a
+    Fin Fonction
+
+    // Saisie des deux nombres au clavier
+    Afficher "Entrez le premier nombre : "
+    Lire a
+    Afficher "Entrez le deuxième nombre : "
+    Lire b
+
+    // Calcul du PPCM
+    resultat = ppcm(a, b)
+
+    // Affichage du résultat
+    Afficher "Le PPCM de", a, "et", b, "est :", resultat
+
+Fin

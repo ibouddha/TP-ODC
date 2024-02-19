@@ -1,0 +1,13 @@
+Demandez à l'utilisateur de saisir une date composée du jour, du mois et de l'année.
+Lisez et stockez les valeurs du jour, du mois et de l'année.
+Vérifiez si l'année est bissextile (en utilisant les règles pour déterminer si une année est bissextile).
+Vérifiez si le mois est valide (compris entre 1 et 12).
+Vérifiez si le jour est valide pour le mois donné :
+Si le mois est février, vérifiez si le jour est compris entre 1 et 28 ou 29 (pour une année bissextile).
+Si le mois est janvier, mars, mai, juillet, août, octobre ou décembre, vérifiez si le jour est compris entre 1 et 31.
+Sinon, vérifiez si le jour est compris entre 1 et 30.
+Si la date est valide, effectuez les étapes suivantes pour déterminer la date précédente :
+Si le jour est le premier jour du mois, passez au mois précédent et déterminez le dernier jour du mois précédent.
+Si le mois est janvier et le jour est le 1er janvier, passez à l'année précédente et déterminez le dernier jour de décembre de l'année précédente.
+Sinon, décrémentez simplement de 1 le jour.
+Affichez la nouvelle date.

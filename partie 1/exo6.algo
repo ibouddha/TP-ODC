@@ -1,0 +1,6 @@
+recuperer la longueur
+recuperer la largeur
+affecter à la variable perimetre, la valeur de l'operateur (longueur+largeur)*2
+affecter à la variable surface, le resultat de l'operation (longueur * largeur)
+affecter à la variable diagonal, le resultat de l'operation sqrt de (longueur^2 + largeur^2)
+affichage des resultats d'operation

@@ -1,0 +1,28 @@
+Début
+
+    // Fonction pour calculer le PGCD de deux nombres
+    Fonction pgcd(a, b)
+        Tant que a est différent de b faire
+            Si a est supérieur à b alors
+                a = a - b
+            Sinon
+                b = b - a
+            Fin Si
+        Fin Tant que
+        // Le PGCD est égal à l'un des deux nombres
+        retourner a
+    Fin Fonction
+
+    // Saisie des deux nombres au clavier
+    Afficher "Entrez le premier nombre : "
+    Lire a
+    Afficher "Entrez le deuxième nombre : "
+    Lire b
+
+    // Calcul du PGCD
+    resultat = pgcd(a, b)
+
+    // Affichage du résultat
+    Afficher "Le PGCD de", a, "et", b, "est :", resultat
+
+Fin

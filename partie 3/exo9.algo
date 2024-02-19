@@ -1,0 +1,45 @@
+Début
+
+    // Saisie du nombre d'entiers N entre 10 et 50
+    Afficher "Entrez le nombre d'entiers (entre 10 et 50) : "
+    Lire N
+    
+    // Vérification si N est compris entre 10 et 50
+    Si N < 10 ou N > 50 alors
+        Afficher "Le nombre d'entiers doit être compris entre 10 et 50."
+        Arrêter
+    Fin Si
+
+    // Initialisation de la séquence croissante maximale
+    longueur_max = 0
+    position_max = 0
+    longueur_actuelle = 1
+    position_actuelle = 1
+    
+    // Saisie et traitement des N entiers
+    Pour i allant de 1 à N faire
+        Afficher "Entrez l'entier ", i, " (entre 1 et 100) : "
+        Lire entier
+        
+        // Vérification de la séquence croissante
+        Si i > 1 et entier > entier_precedent alors
+            longueur_actuelle = longueur_actuelle + 1
+        Sinon
+            longueur_actuelle = 1
+            position_actuelle = i
+        Fin Si
+        
+        // Mise à jour de la séquence maximale
+        Si longueur_actuelle > longueur_max alors
+            longueur_max = longueur_actuelle
+            position_max = position_actuelle
+        Fin Si
+        
+        // Stockage de l'entier précédent pour la prochaine itération
+        entier_precedent = entier
+    Fin Pour
+    
+    // Affichage de la plus longue séquence croissante et sa position
+    Afficher "La plus longue séquence croissante commence à la position", position_max, "et a une longueur de", longueur_max, "entiers."
+
+Fin

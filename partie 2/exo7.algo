@@ -1,0 +1,10 @@
+Demandez à l'utilisateur de saisir une année.
+Demandez à l'utilisateur de saisir un mois.
+Vérifiez si l'année est bissextile ou non (en utilisant les règles pour déterminer si une année est bissextile).
+Pour chaque mois, vérifiez le nombre de jours en fonction du mois et de l'année :
+Si le mois est février :
+Si l'année est bissextile, février a 29 jours.
+Sinon, février a 28 jours.
+Si le mois est janvier, mars, mai, juillet, août, octobre ou décembre, ces mois ont 31 jours.
+Sinon, le mois est avril, juin, septembre ou novembre, ces mois ont 30 jours.
+Affichez le nombre de jours du mois saisi pour l'année saisie.

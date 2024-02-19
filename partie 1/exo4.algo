@@ -1,0 +1,5 @@
+declarer une constante pi avec la valeur 3,14
+recuperer la valeur de la variable rayon
+affecter a la variable perimetre, le resultat de l'operation: 2 * pi * rayon
+affecter a la variable  surface, le resultat de l'operation: pi * rayon^2
+afficher les deux resultats

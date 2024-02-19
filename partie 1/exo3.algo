@@ -1,0 +1,3 @@
+recuperation de la temperature dans la variable temperature en celsius
+affecter a la variable resultat, le resultat de l'operation: F = (C *  9/5) + 32
+afficher la variable qui stocke le resultat de l'operation resultat

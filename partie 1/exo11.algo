@@ -1,0 +1,10 @@
+Demander à l'utilisateur d'entrer le libellé du produit.
+Lire et stocker le libellé du produit.
+Demander à l'utilisateur d'entrer la quantité en stock du produit.
+Lire et stocker la quantité en stock du produit.
+Demander à l'utilisateur d'entrer le prix unitaire du produit.
+Lire et stocker le prix unitaire du produit.
+Calculer le montant en stock du produit en multipliant la quantité en stock par le prix unitaire.
+Calculer le montant de la TVA en multipliant le montant en stock par 0.18 (TVA de 18%).
+Calculer le montant TTC en ajoutant le montant en stock et le montant de la TVA.
+Afficher le libellé du produit, la quantité en stock, le prix unitaire, le montant en stock et le montant TTC.

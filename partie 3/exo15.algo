@@ -1,0 +1,35 @@
+Début
+
+    // Fonction pour vérifier si un nombre est premier
+    Fonction est_premier(nombre)
+        Si nombre est inférieur à 2 alors
+            Renvoyer Faux
+        Fin Si
+        
+        Pour chaque diviseur de 2 à la racine carrée de nombre faire
+            Si nombre est divisible par le diviseur alors
+                Renvoyer Faux
+            Fin Si
+        Fin Pour
+        
+        Renvoyer Vrai
+    Fin Fonction
+
+    // Saisie de l'entier positif N
+    Afficher "Entrez un entier positif N : "
+    Lire N
+
+    // Initialisation du compteur de nombres premiers trouvés et du nombre à tester
+    nombres_trouvés = 0
+    nombre_testé = 2
+
+    // Tant que le nombre de nombres premiers trouvés est inférieur à N
+    Tant que nombres_trouvés < N faire
+        Si est_premier(nombre_testé) alors
+            Afficher nombre_testé
+            nombres_trouvés = nombres_trouvés + 1
+        Fin Si
+        nombre_testé = nombre_testé + 1
+    Fin Tant que
+
+Fin

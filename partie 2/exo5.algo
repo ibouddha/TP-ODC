@@ -1,0 +1,8 @@
+Demander à l'utilisateur d'entrer trois valeurs entières (A, B et C).
+Lire et stocker les valeurs de A, B et C.
+Comparer les valeurs pour déterminer l'ordre croissant :
+Si A est inférieur ou égal à B et B est inférieur ou égal à C, alors l'ordre croissant est A, B, C.
+Sinon, si B est inférieur ou égal à A et A est inférieur ou égal à C, alors l'ordre croissant est B, A, C.
+Sinon, l'ordre croissant est C, A, B.
+Afficher les valeurs dans l'ordre croissant.
+Afficher les valeurs dans l'ordre décroissant en inversant l'ordre de l'affichage.

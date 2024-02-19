@@ -1,0 +1,32 @@
+Début
+
+    // Fonction pour vérifier si un nombre est parfait
+    Fonction est_parfait(nombre)
+        somme_diviseurs = 0
+        
+        // Parcourir les diviseurs de 1 à nombre / 2 inclusivement
+        Pour chaque diviseur de 1 à nombre / 2 faire
+            Si nombre est divisible par le diviseur alors
+                somme_diviseurs = somme_diviseurs + diviseur
+            Fin Si
+        Fin Pour
+        
+        Si somme_diviseurs est égal à nombre alors
+            Renvoyer Vrai  // Si la somme des diviseurs est égale au nombre, il est parfait
+        Sinon
+            Renvoyer Faux  // Sinon, le nombre n'est pas parfait
+        Fin Si
+    Fin Fonction
+
+    // Saisie du nombre à tester
+    Afficher "Entrez un nombre entier positif : "
+    Lire nombre
+
+    // Vérification si le nombre est parfait
+    Si est_parfait(nombre) alors
+        Afficher nombre, " est un nombre parfait."
+    Sinon
+        Afficher nombre, " n'est pas un nombre parfait."
+    Fin Si
+
+Fin

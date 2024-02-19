@@ -1,0 +1,13 @@
+Déclarer les variables : nom (chaîne), prenom (chaîne), jour_naissance (entier), mois_naissance (entier), annee_naissance (entier), annee_actuelle (entier), age (entier).
+Déclarer la constante : ANNEE_ACTUELLE = [année en cours].
+Demander à l'utilisateur d'entrer le nom de l'étudiant.
+Lire et stocker le nom de l'étudiant.
+Demander à l'utilisateur d'entrer le prénom de l'étudiant.
+Lire et stocker le prénom de l'étudiant.
+Demander à l'utilisateur d'entrer la date de naissance de l'étudiant (jour, mois, année).
+Lire et stocker le jour, le mois et l'année de naissance de l'étudiant.
+Demander à l'utilisateur d'entrer l'année en cours.
+Lire et stocker l'année en cours.
+Calculer l'âge de l'étudiant en soustrayant l'année de naissance de l'année actuelle.
+Afficher les informations de l'étudiant (nom, prénom, date de naissance).
+Afficher l'âge de l'étudiant.

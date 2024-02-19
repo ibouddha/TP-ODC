@@ -1,0 +1,34 @@
+Début
+
+    // Fonction pour calculer la division de a par b par soustractions successives
+    Fonction division_par_soustraction(a, b)
+        Si b est égal à 0 alors
+            Afficher "Erreur : Division par zéro"
+            Retourner
+        Fin Si
+        
+        quotient = 0
+        reste = a
+        
+        // Soustractions successives
+        Tant que reste est supérieur ou égal à b faire
+            reste = reste - b
+            quotient = quotient + 1
+        Fin Tant que
+        
+        Afficher "Le quotient de", a, "divisé par", b, "est :", quotient
+        Si reste est différent de 0 alors
+            Afficher "Il reste :", reste
+        Fin Si
+    Fin Fonction
+
+    // Saisie des valeurs de a et b
+    Afficher "Entrez la valeur de a : "
+    Lire a
+    Afficher "Entrez la valeur de b : "
+    Lire b
+    
+    // Appel de la fonction pour calculer la division par soustractions successives
+    division_par_soustraction(a, b)
+
+Fin

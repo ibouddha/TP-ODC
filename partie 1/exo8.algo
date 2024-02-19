@@ -1,0 +1,7 @@
+recuperation de x1
+recuperation de y1
+recuperation de x2
+recuperation de y2
+affecter a la variable distance, le resultat de l'operation sqrt((x1-x2)^2+(y1-y2)^2)
+afficher le resultat de distance.
+fin

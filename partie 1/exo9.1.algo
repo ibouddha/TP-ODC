@@ -1,0 +1,28 @@
+Début
+    // Demander à l'utilisateur d'entrer l'heure de départ et minute de départ
+    ecrire "entrez heure de depart"
+    Lire heure_depart
+    ecrire "entrez les minutes de depart"
+    Lire minutes_depart
+
+    // Demander à l'utilisateur d'entrer l'heure d'arrivée et minute d'arrivée
+    ecrire "entrez l'heure d'arrivee"
+    Lire heure_arrivee
+    ecrire "entrez les minutes d'arrivee"
+    Lire minutes_arrivee
+
+    // Calculer la durée de vol en heures et en minutes
+    si heures_arrivee >= heures_depart alors
+        duree_heures = heures_arrivee - heures_depart
+    sinon
+        duree_heures = 24 - heures_depart + heures_arrivee
+
+    si minutes_arrivee >= minutes_depart alors
+        duree_minutes = minutes_arrivee - minutes_depart
+    sinon
+        duree_heures = duree_heures - 1
+        duree_minutes = 60 - minutes_depart + minutes_arrivee
+
+    // Afficher la durée de vol
+    Afficher "La durée de vol est de ", duree_heures, " heures et ", duree_minutes, " minutes."
+Fin

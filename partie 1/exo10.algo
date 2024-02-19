@@ -1,0 +1,12 @@
+Algorithme Convertir_Secondes
+    Déclarer les variables : secondes, heures, minutes, reste_secondes
+    
+    Afficher "Entrez le nombre de secondes à convertir : "
+    Lire la valeur de secondes
+    
+    Diviser le nombre de secondes par 3600 et stocker le résultat dans la variable heures
+    Calculer le reste des secondes après conversion en heures en utilisant le modulo 3600 et stocker le résultat dans reste_secondes
+    Diviser reste_secondes par 60 et stocker le résultat dans la variable minutes
+    Calculer le reste des secondes après conversion en minutes en utilisant le modulo 60 et stocker le résultat dans la variable secondes
+    
+    Afficher "Le nombre de secondes équivaut à", heures, "heures,", minutes, "minutes et", secondes, "secondes."
