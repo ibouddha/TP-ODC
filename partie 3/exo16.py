@@ -1,48 +1,23 @@
-Debut
-#recuperation des dimensions du sapin
-ecrire ("donner le symbole")
-lire (symbole)
-ecrire ("donner la hauteur des feuilles")
-lire (hauteur_feuilles)
-ecrire ("donner la hauteur du tronc")
-lire  (hauteur_tronc)
-ecrire ("donner la largeur des racines")
-lire (largeur_racines)
+def dessiner_sapin(symbole, hauteur_feuilles, hauteur_tronc, largeur_racines):
+    # Dessiner les feuilles
+    for i in range(1, hauteur_feuilles + 1):
+        print((symbole * (2 * i - 1)).center(hauteur_feuilles * 2 - 1))
 
-POUR i ALLANT DE 1 À hauteur_feuilles + 1 FAIRE
-  longueur_ligne = 2 * i - 1
-  espaces_debut = (hauteur_feuilles * 2 - 1 - longueur_ligne) / 2
-  
-  POUR j ALLANT DE 1 À espaces_debut FAIRE
-      Afficher " "
-  FIN POUR
-  
-  POUR k ALLANT DE 1 À longueur_ligne FAIRE
-      Afficher symbole
-  FIN POUR
-  
-  Afficher Nouvelle_Ligne
-FIN POUR
-  
-POUR _ ALLANT DE 1 À hauteur_tronc FAIRE
-  espaces_debut = (hauteur_feuilles * 2 - 1 - 1) / 2
-  
-  POUR j ALLANT DE 1 À espaces_debut FAIRE
-      Afficher " "
-  FIN POUR
-  
-  Afficher symbole
-  Afficher Nouvelle_Ligne
-FIN POUR
-  
-espaces_debut = (hauteur_feuilles * 2 - 1 - largeur_racines) / 2
-POUR _ ALLANT DE 1 À espaces_debut FAIRE
-    Afficher " "
-FIN POUR
+    # Dessiner le tronc
+    for _ in range(hauteur_tronc):
+        print(symbole.center(hauteur_feuilles * 2 - 1))
 
-POUR _ ALLANT DE 1 À largeur_racines FAIRE
-    Afficher symbole
-FIN POUR
+    ## Dessiner les racines
+    #for _ in range(largeur_racines):
+    print((symbole * largeur_racines).center(hauteur_feuilles * 2 - 1))
+    
 
-Afficher Nouvelle_Ligne
-Fin Algorithme
+
+# Demander les informations à l'utilisateur
+symbole = input("Entrez le symbole à utiliser ($, *, +, ou 0) : ")
+hauteur_feuilles = int(input("Entrez la hauteur des feuilles : "))
+hauteur_tronc = int(input("Entrez la hauteur du tronc : "))
+largeur_racines = int(input("Entrez la largeur des racines : "))
+
+# Dessiner le sapin
+dessiner_sapin(symbole, hauteur_feuilles, hauteur_tronc, largeur_racines)
