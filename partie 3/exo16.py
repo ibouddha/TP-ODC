@@ -1,0 +1,48 @@
+Debut
+#recuperation des dimensions du sapin
+ecrire ("donner le symbole")
+lire (symbole)
+ecrire ("donner la hauteur des feuilles")
+lire (hauteur_feuilles)
+ecrire ("donner la hauteur du tronc")
+lire  (hauteur_tronc)
+ecrire ("donner la largeur des racines")
+lire (largeur_racines)
+
+POUR i ALLANT DE 1 À hauteur_feuilles + 1 FAIRE
+  longueur_ligne = 2 * i - 1
+  espaces_debut = (hauteur_feuilles * 2 - 1 - longueur_ligne) / 2
+  
+  POUR j ALLANT DE 1 À espaces_debut FAIRE
+      Afficher " "
+  FIN POUR
+  
+  POUR k ALLANT DE 1 À longueur_ligne FAIRE
+      Afficher symbole
+  FIN POUR
+  
+  Afficher Nouvelle_Ligne
+FIN POUR
+  
+POUR _ ALLANT DE 1 À hauteur_tronc FAIRE
+  espaces_debut = (hauteur_feuilles * 2 - 1 - 1) / 2
+  
+  POUR j ALLANT DE 1 À espaces_debut FAIRE
+      Afficher " "
+  FIN POUR
+  
+  Afficher symbole
+  Afficher Nouvelle_Ligne
+FIN POUR
+  
+espaces_debut = (hauteur_feuilles * 2 - 1 - largeur_racines) / 2
+POUR _ ALLANT DE 1 À espaces_debut FAIRE
+    Afficher " "
+FIN POUR
+
+POUR _ ALLANT DE 1 À largeur_racines FAIRE
+    Afficher symbole
+FIN POUR
+
+Afficher Nouvelle_Ligne
+Fin Algorithme
