@@ -1,0 +1,14 @@
+Sous-programme operation_matrices(matrice1, matrice2, operation):
+    Si taille(matrice1) ≠ taille(matrice2):
+        Afficher "Les matrices ne sont pas de même taille, opération impossible."
+        Arrêter
+
+    nouveau_matrice <- tableau vide de même taille que matrice1
+    Pour chaque ligne dans la matrice1:
+        Pour chaque colonne dans la matrice1:
+            Si operation == "somme":
+                nouveau_matrice[ligne][colonne] <- matrice1[ligne][colonne] + matrice2[ligne][colonne]
+            Sinon si operation == "produit":
+                nouveau_matrice[ligne][colonne] <- matrice1[ligne][colonne] * matrice2[ligne][colonne]
+
+    Retourner nouveau_matrice

@@ -1,0 +1,5 @@
+Sous-programme somme_deux_tableaux(tableau1, tableau2):
+    Créer un nouveau tableau de même taille que les tableaux d'entrée
+    Pour chaque indice de 0 à la taille des tableaux - 1:
+        nouveau_tableau[indice] <- tableau1[indice] + tableau2[indice]
+    Retourner nouveau_tableau

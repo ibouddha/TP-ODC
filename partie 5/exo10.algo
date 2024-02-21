@@ -1,0 +1,17 @@
+Sous-programme fusion_tableaux_tries(tableau1, tableau2):
+    fusion <- tableau vide
+    index1 <- 0
+    index2 <- 0
+
+    Tant que index1 < taille(tableau1) et index2 < taille(tableau2):
+        Si tableau1[index1] <= tableau2[index2]:
+            Ajouter tableau1[index1] à fusion
+            Incrémenter index1
+        Sinon:
+            Ajouter tableau2[index2] à fusion
+            Incrémenter index2
+
+    Ajouter les éléments restants de tableau1 (si existent) à fusion
+    Ajouter les éléments restants de tableau2 (si existent) à fusion
+
+    Retourner fusion

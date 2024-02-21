@@ -1,0 +1,12 @@
+Sous-programme sommes_diviseurs(n):
+    somme <- 0
+    Pour chaque diviseur d'1 à n - 1:
+        Si n % diviseur == 0:
+            somme <- somme + diviseur
+    Retourner somme
+
+Sous-programme sont_amis(M, N):
+    Si sommes_diviseurs(M) == N et sommes_diviseurs(N) == M:
+        Retourner VRAI
+    Sinon:
+        Retourner FAUX

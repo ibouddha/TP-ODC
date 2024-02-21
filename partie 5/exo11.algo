@@ -1,0 +1,32 @@
+Sous-programme analyse_matrice(matrice):
+    max_zeros <- 0
+    max_uns <- 0
+    total_elements <- taille(matrice) * taille(matrice[0])
+    total_zeros <- 0
+    total_uns <- 0
+
+    Pour chaque colonne dans la matrice:
+        zeros_colonne <- 0
+        Pour chaque élément dans la colonne:
+            Si élément == 0:
+                zeros_colonne <- zeros_colonne + 1
+                total_zeros <- total_zeros + 1
+            Sinon:
+                total_uns <- total_uns + 1
+
+        Si zeros_colonne > max_zeros:
+            max_zeros <- zeros_colonne
+
+    Pour chaque ligne dans la matrice:
+        uns_ligne <- 0
+        Pour chaque élément dans la ligne:
+            Si élément == 1:
+                uns_ligne <- uns_ligne + 1
+
+        Si uns_ligne > max_uns:
+            max_uns <- uns_ligne
+
+    pourcentage_zeros <- (total_zeros / total_elements) * 100
+    pourcentage_uns <- (total_uns / total_elements) * 100
+
+    Retourner max_zeros, max_uns, pourcentage_zeros, pourcentage_uns

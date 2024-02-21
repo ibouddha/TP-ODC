@@ -1,0 +1,10 @@
+Sous-programme transposer_matrice(matrice):
+    n <- nombre de lignes dans matrice
+    m <- nombre de colonnes dans matrice
+    transposée <- tableau vide de m lignes et n colonnes
+
+    Pour chaque ligne dans matrice:
+        Pour chaque colonne dans matrice:
+            transposée[colonne][ligne] <- matrice[ligne][colonne]
+
+    Retourner transposée

@@ -1,0 +1,7 @@
+Procédure inserer_element_trié(T, n, x):
+    position <- n - 1
+    T[n] <- x
+    Trier le tableau T en ordre croissant
+    Tant que position >= 0 et T[position] > x:
+        Échanger T[position] avec T[position + 1]
+        Décrémenter position
