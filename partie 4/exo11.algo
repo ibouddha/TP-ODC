@@ -1,0 +1,13 @@
+Fonction est_premier(nombre)
+    SI nombre <= 1 ALORS
+        RETOURNER Faux
+    FIN SI
+    
+    POUR diviseur DE 2 À √nombre FAIRE
+        SI nombre modulo diviseur est égal à 0 ALORS
+            RETOURNER Faux
+        FIN SI
+    FIN POUR
+    
+    RETOURNER Vrai
+Fin Fonction

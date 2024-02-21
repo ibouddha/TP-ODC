@@ -1,0 +1,10 @@
+Fonction sont_amis(M, N)
+    somme_diviseurs_M ← somme_diviseurs(M)
+    somme_diviseurs_N ← somme_diviseurs(N)
+    
+    SI somme_diviseurs_M = N ET somme_diviseurs_N = M ALORS
+        RETOURNER Vrai
+    SINON
+        RETOURNER Faux
+    FIN SI
+Fin Fonction

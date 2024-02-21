@@ -1,0 +1,13 @@
+Fonction est_date_valide(jour, mois, annee)
+    jours_par_mois ← [31, 28 si l'année n'est pas bissextile, sinon 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+    
+    SI mois < 1 OU mois > 12 ALORS
+        RETOURNER Faux
+    FIN SI
+    
+    SI jour < 1 OU jour > jours_par_mois[mois - 1] ALORS
+        RETOURNER Faux
+    FIN SI
+    
+    RETOURNER Vrai
+Fin fonction

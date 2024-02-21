@@ -1,0 +1,15 @@
+Fonction est_parfait(nombre)
+    somme_diviseurs ← 0
+    
+    POUR diviseur DE 1 À nombre / 2 FAIRE
+        SI nombre modulo diviseur est égal à 0 ALORS
+            somme_diviseurs ← somme_diviseurs + diviseur
+        FIN SI
+    FIN POUR
+    
+    SI somme_diviseurs = nombre ALORS
+        RETOURNER Vrai
+    SINON
+        RETOURNER Faux
+    FIN SI
+Fin Fonction

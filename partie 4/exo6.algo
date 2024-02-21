@@ -1,0 +1,25 @@
+fonction date_dans_5_jours(jour, mois, annee)
+    jours_par_mois ← [31, 28 si l'année n'est pas bissextile, sinon 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+    
+    SI jour < 1 OU jour > jours_par_mois[mois - 1] ALORS
+        RETOURNER "Date invalide"
+    FIN SI
+    
+    SI mois < 1 OU mois > 12 ALORS
+        RETOURNER "Date invalide"
+    FIN SI
+    
+    jours_restants ← 5
+    jour += jours_restants
+    
+    TANT QUE jour > jours_par_mois[mois - 1] FAIRE
+        jour -= jours_par_mois[mois - 1]
+        mois += 1
+        SI mois > 12 ALORS
+            mois ← 1
+            annee += 1
+        FIN SI
+    FIN TANT QUE
+    
+    RETOURNER "La date dans 5 jours est : " + jour + "/" + mois + "/" + annee
+Fin fonction

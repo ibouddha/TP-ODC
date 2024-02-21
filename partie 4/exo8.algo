@@ -1,0 +1,11 @@
+Fonction somme_diviseurs(nombre)
+    somme ← 0
+    
+    POUR diviseur DE 1 À nombre FAIRE
+        SI nombre modulo diviseur est égal à 0 ALORS
+            somme ← somme + diviseur
+        FIN SI
+    FIN POUR
+    
+    RETOURNER somme
+Fin fonction

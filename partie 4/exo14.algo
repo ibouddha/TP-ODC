@@ -1,0 +1,36 @@
+fonction est_premier(nombre)
+    SI nombre <= 1 ALORS
+        RETOURNER Faux
+    FIN SI
+    
+    POUR diviseur DE 2 À √nombre FAIRE
+        SI nombre modulo diviseur est égal à 0 ALORS
+            RETOURNER Faux
+        FIN SI
+    FIN POUR
+    
+    RETOURNER Vrai
+Fin fonction
+
+Fonction afficher_n_premiers_nombres_premiers(n)
+    compteur ← 0
+    nombre ← 2
+    TANT QUE compteur < n FAIRE
+        SI est_premier(nombre) ALORS
+            AFFICHER nombre
+            compteur ← compteur + 1
+        FIN SI
+        nombre ← nombre + 1
+    FIN TANT QUE
+Fin Fonction
+
+Algorithme principal
+    N ← -1
+    TANT QUE N < 1 FAIRE
+        AFFICHER "Entrez un entier positif N : "
+        LIRE N
+    FIN TANT QUE
+    
+    AFFICHER "Les", N, "premiers nombres premiers sont :"
+    afficher_n_premiers_nombres_premiers(N)
+Fin Algorithme

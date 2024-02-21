@@ -1,0 +1,30 @@
+Fonction date_avant_N_jours(jour, mois, annee, N)
+    jours_par_mois ← [31, 28 si l'année n'est pas bissextile, sinon 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+    
+    SI jour < 1 OU jour > jours_par_mois[mois - 1] ALORS
+        RETOURNER "Date invalide"
+    FIN SI
+    
+    SI mois < 1 OU mois > 12 ALORS
+        RETOURNER "Date invalide"
+    FIN SI
+    
+    SI N < 0 ALORS
+        RETOURNER "Nombre de jours invalide"
+    FIN SI
+    
+    TANT QUE N > 0 FAIRE
+        jour ← jour - 1
+        SI jour < 1 ALORS
+            mois ← mois - 1
+            SI mois < 1 ALORS
+                mois ← 12
+                annee ← annee - 1
+            FIN SI
+            jour ← jours_par_mois[mois - 1]
+        FIN SI
+        N ← N - 1
+    FIN TANT QUE
+    
+    RETOURNER "La date il y a " + N + " jours était : " + jour + "/" + mois + "/" + annee
+Fin fonction

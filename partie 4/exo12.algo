@@ -1,0 +1,57 @@
+Fonction saisir_nombre_positif()
+    nombre ← -1
+    TANT QUE nombre < 0 FAIRE
+        AFFICHER "Entrez un nombre positif : "
+        LIRE nombre
+    FIN TANT QUE
+    RETOURNER nombre
+Fin Fonction
+
+Fonction est_premier(nombre)
+    SI nombre <= 1 ALORS
+        RETOURNER Faux
+    FIN SI
+    
+    POUR diviseur DE 2 À √nombre FAIRE
+        SI nombre modulo diviseur est égal à 0 ALORS
+            RETOURNER Faux
+        FIN SI
+    FIN POUR
+    
+    RETOURNER Vrai
+Fin Fonction
+
+Algorithme nombres_premiers_et_parfaits()
+    nb_entiers ← 0
+    nb_premiers ← 0
+    produit_parfaits ← 1
+    
+    TANT QUE VRAI FAIRE
+        nombre ← saisir_nombre_positif()
+        SI nombre = 0 ALORS
+            SORTIR
+        FIN SI
+        
+        nb_entiers ← nb_entiers + 1
+        
+        SI est_premier(nombre) ALORS
+            nb_premiers ← nb_premiers + 1
+            AFFICHER "Nombre premier trouvé :", nombre
+        FIN SI
+        
+        // Vérifier si le nombre est parfait
+        somme_diviseurs ← 0
+        POUR diviseur DE 1 À nombre / 2 FAIRE
+            SI nombre modulo diviseur est égal à 0 ALORS
+                somme_diviseurs ← somme_diviseurs + diviseur
+            FIN SI
+        FIN POUR
+        SI somme_diviseurs = nombre ALORS
+            produit_parfaits ← produit_parfaits * nombre
+        FIN SI
+    FIN TANT QUE
+    
+    AFFICHER "Nombre d'entiers saisis :", nb_entiers
+    AFFICHER "Nombre de nombres premiers :", nb_premiers
+    AFFICHER "Produit des nombres parfaits :", produit_parfaits
+Fin Algorithme
