@@ -1,0 +1,43 @@
+Fonction saisir_entiers(N):
+    entiers <- liste vide
+    Pour i allant de 1 à N:
+        Entier <- saisir un entier entre 1 et 100
+        Tant que Entier est invalide ou déjà présent dans entiers:
+            Afficher "Entier invalide ou déjà saisi. Veuillez réessayer."
+            Entier <- saisir un entier entre 1 et 100
+        Ajouter Entier à entiers
+    Retourner entiers
+
+Fonction trouver_sequence_croissante(entiers):
+    max_sequence <- liste vide
+    sequence_actuelle <- liste contenant le premier élément de entiers
+    max_position <- 0
+    
+    Pour i allant de 1 à la taille de entiers:
+        Si entiers[i] > entiers[i - 1]:
+            Ajouter entiers[i] à sequence_actuelle
+        Sinon:
+            Si la longueur de sequence_actuelle est plus grande que celle de max_sequence:
+                max_sequence <- sequence_actuelle
+                max_position <- i - longueur(max_sequence)
+            Réinitialiser sequence_actuelle avec entiers[i]
+    
+    Si la longueur de sequence_actuelle est plus grande que celle de max_sequence:
+        max_sequence <- sequence_actuelle
+        max_position <- taille(entiers) - longueur(max_sequence)
+    
+    Retourner max_position, max_sequence
+
+Fonction principale:
+    N <- saisir un entier entre 10 et 50
+    Tant que N n'est pas entre 10 et 50:
+        Afficher "Nombre invalide. Veuillez réessayer."
+        N <- saisir un entier entre 10 et 50
+    
+    entiers <- saisir_entiers(N)
+    position, sequence <- trouver_sequence_croissante(entiers)
+    
+    Afficher "La plus longue séquence croissante est :", sequence
+    Afficher "La position du premier nombre de cette séquence est :", position
+
+Appeler la fonction principale
