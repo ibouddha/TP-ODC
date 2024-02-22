@@ -1,0 +1,6 @@
+Fonction saisir_matrice(n, m):
+    matrice <- tableau de n lignes et m colonnes
+    Pour chaque ligne de 0 à n - 1:
+        Pour chaque colonne de 0 à m - 1:
+            Saisir matrice[ligne][colonne]
+    Retourner matrice

@@ -1,0 +1,12 @@
+Sous-programme moyenne_colonnes(matrice):
+    moyennes <- tableau vide de taille nombre_de_colonnes(matrice)
+
+    Pour chaque colonne dans la matrice:
+        somme <- 0
+        Pour chaque élément dans la colonne:
+            somme <- somme + élément
+
+        moyenne <- somme / taille(colonne)
+        Ajouter moyenne à moyennes
+
+    Retourner moyennes

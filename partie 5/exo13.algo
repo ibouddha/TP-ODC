@@ -1,0 +1,9 @@
+Sous-programme transfert_diagonale(matrice):
+    diagonale <- tableau vide
+    taille_matrice <- taille(matrice)
+
+    Pour chaque indice de 0 à taille_matrice - 1:
+        Si indice != taille_matrice - indice - 1:
+            Ajouter matrice[indice][indice] à diagonale
+
+    Retourner diagonale

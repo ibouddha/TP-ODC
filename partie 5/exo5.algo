@@ -1,0 +1,6 @@
+Sous-programme somme_produit_tableaux(tableau1, tableau2):
+    SOM <- 0
+    Pour chaque élément dans tableau1:
+        Pour chaque élément dans tableau2:
+            SOM <- SOM + (élément_tableau1 * élément_tableau2)
+    Retourner SOM

@@ -1,0 +1,17 @@
+Sous-programme sous_suite_plus_longue(tableau):
+    longueur_max <- 1
+    debut_max <- 0
+    longueur_actuelle <- 1
+    debut_actuel <- 0
+
+    Pour chaque indice de 1 à la taille du tableau - 1:
+        Si tableau[indice] >= tableau[indice - 1]:
+            longueur_actuelle <- longueur_actuelle + 1
+            Si longueur_actuelle > longueur_max:
+                longueur_max <- longueur_actuelle
+                debut_max <- debut_actuel
+        Sinon:
+            debut_actuel <- indice
+            longueur_actuelle <- 1
+
+    Retourner longueur_max, debut_max

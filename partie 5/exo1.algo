@@ -1,0 +1,6 @@
+Sous-programme sont_consecutifs(tableau):
+    Trier le tableau en ordre croissant
+    Pour chaque indice de 0 à la taille du tableau - 2:
+        Si tableau[indice + 1] - tableau[indice] != 1:
+            Retourner FAUX
+    Retourner VRAI

@@ -1,0 +1,32 @@
+Sous-programme stats_tableau_fixe():
+    tableau <- tableau fixe de taille 10
+    Saisir les valeurs dans le tableau
+    Minimum <- tableau[0]
+    Maximum <- tableau[0]
+    Somme <- 0
+    Pour chaque élément dans le tableau:
+        Si élément < Minimum:
+            Minimum <- élément
+        Si élément > Maximum:
+            Maximum <- élément
+        Somme <- Somme + élément
+    Moyenne <- Somme / taille(tableau)
+    Afficher Minimum, Maximum, Moyenne
+finSousProgram
+
+Sous-programme stats_tableau_variable():
+    taille <- Saisir la taille du tableau
+    tableau <- tableau de taille 'taille'
+    Saisir les valeurs dans le tableau
+    Minimum <- tableau[0]
+    Maximum <- tableau[0]
+    Somme <- 0
+    Pour chaque élément dans le tableau:
+        Si élément < Minimum:
+            Minimum <- élément
+        Si élément > Maximum:
+            Maximum <- élément
+        Somme <- Somme + élément
+    Moyenne <- Somme / taille(tableau)
+    Afficher Minimum, Maximum, Moyenne
+finSousProgram
