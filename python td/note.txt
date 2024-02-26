@@ -1,0 +1,2 @@
+créer un environnement virtual: permettant d'isoler le programme du reste de la machine.
+documentation à faire
