@@ -33,8 +33,8 @@ def display(mois):
 
 print("\t\t====>Affichage<====",end="\n")
 
-display(change_lang("Eng"))
-lang="fr"
+display(change_lang("eng"))
+lang="eng"
 
 while(True):
     while (True):
