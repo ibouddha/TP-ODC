@@ -3,18 +3,19 @@
 def del_space(phrase:str):
     # Params: phrase - string with spaces at the beginning and/or end.
     # Returns: string without leading or trailing space characters.
-        
+    
+    #liste contenant les caractères speciaux à enlever. 
     invalid_word = ["&", "$","£","%","#","{","]","[","}","@", "(", ")","<", ">","/"]
-    valid_word = [",",";",".","!",":","?","'"]
+    valid_word = [",",";","'",".", "!", ":","?","-"] 
     modified_sentence =""
 
     for i in range(0,len(phrase)):
-        if phrase[i]!=" ":
+        if phrase[i]!=" " and phrase[i] not in invalid_word :
             modified_sentence += phrase[i]
         else:
-            if(i==len(phrase)-1 or phrase[i+1]!=" " and (phrase[i+1] not in valid_word or phrase[i-1]!=" ")) :
-                modified_sentence +=' '
-    # print("Modified Sentence is: ",modified_sentence,end= ".")
+            if i==len(phrase)-1 or phrase[i+1]!=" " and (phrase[i+1] not in valid_word and phrase[i+1]!=" "):
+                modified_sentence += " "
+
     return modified_sentence
 
 def estValide(phrase:str)->bool:
