@@ -17,7 +17,7 @@ def remove_space(numero:str):
     return number
 
 def isValid(number):
-    indicatifs = ["77","78","70","75","76"]
+    indicatifs = {"77":"Orange","78":"Orange","70":"Expresso","75":"Promobile","76":"Free"}
     numero = remove_space(number)
     #recuperer le numero from l'utilisateur
     if numero[0:2] in indicatifs and len(numero) == 9 and numero.isnumeric() :
@@ -45,6 +45,24 @@ for i in range(0,annuaire):
         liste_invalide.append(numero)
         liste_valid.append("-----------")
 
+indicatifs = {"77":"Orange","78":"Orange","70":"Expresso","75":"Promobile","76":"Free"}
+al = 0
+fr = 0
+ex = 0
+pro = 0
+#parcourir liste valide et chercher les operateurs
+for numero in liste_valid:
+    if numero != "-----------" :
+        if numero[0:2] == "77" or numero[0:2] == "78":
+            al += 1
+        elif numero[0:2] == "76":
+            fr += 1
+        elif numero[0:2] == '70':
+            ex += 1
+        elif numero[0:2] == '75':
+            pro += 1
 
 for  i in range(0,annuaire+1):
     print (f"{liste_valid[i]}\t\t{liste_invalide[i]}")
+
+print(f"Orange: {al} - Free: {fr} - Expresso: {ex} - Promobile: {pro}")
