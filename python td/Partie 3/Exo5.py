@@ -5,39 +5,43 @@
 # fonction colorier partie diagonale
 
 def colorier(n,position,color):
+    endColor='\x1b[0m'
+    blue = "\033[94m"
+    vert = "\33[92m"
+    red = "\033[31m"
     for i in range(n):
         for j in range(n):
             if position==1:
                 if(color==2):
                     if i<j:
-                        print("\033[94m"+"0 "+'\x1b[0m',end="")
+                        print(blue+"0 "+endColor,end="")
                     if i==j :
-                        print("\33[92m"+"0 "+'\x1b[0m',end="")
+                        print(vert+"0 "+endColor,end="")
                     if i>j:
                         print("0 ",end="")
                 else:
                     if i<j:
-                        print("\033[31m"+"0 "+'\x1b[0m',end="")
+                        print(red+"0 "+endColor,end="")
                     if i==j :
-                        print("\33[92m"+"0 "+'\x1b[0m',end="")
+                        print(vert+"0 "+endColor,end="")
                     if i>j :
                         print("0 ",end="")
             else:
                 if(color==2):
 
                     if i>j:
-                        print("\033[94m"+"0 "+'\x1b[0m',end="")
+                        print(blue+"0 "+endColor,end="")
                     if i<j:
                         print("0 ",end="")
                     if i==j :
-                        print("\33[92m"+"0 "+'\x1b[0m',end="")
+                        print(vert+"0 "+endColor,end="")
                 else:
                     if i>j:
-                        print("\033[94m"+"0 "+'\x1b[0m',end="")
+                        print(red+"0 "+endColor,end="")
                     if i<j:
                         print("0 ",end="")
                     if i==j :
-                        print("\33[92m"+"0 "+'\x1b[0m',end="")
+                        print(vert+"0 "+endColor,end="")
 
         print("")
 
