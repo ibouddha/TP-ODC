@@ -39,27 +39,13 @@ def isValid(number):
 liste_valid = ["Numero Valide"]
 liste_invalide=["Numero invalide"]
 
-#recuperer le nombre maximal de numero
-# annuaire = int(input("combien de numero voulez vous entrer?"))
+# while(True):
+    #recuperer la serie de numero
+annuaire = int(input("suite de chiffre"))
+    # if estUnNombre(annuaire):
+    #     break
 
-cpt=0
-#recuperer les numeros depuis l'utilisateur et les verifier si ils sont valides ou non
-while(True):
-    numero = str(input("donner un numero de telephone ou tapez exit pour arreter: "))
-    if numero == "":
-        liste_valid.append("-----------")
-        liste_invalide.append("-----------")
-        cpt+=1
-    if isValid(numero):
-        liste_valid.append(numero)
-        liste_invalide.append("-----------")
-        cpt+=1
-    else:
-        liste_invalide.append(numero)
-        liste_valid.append("-----------")
-        cpt+=1
-    if numero == "exit":
-        break
+numero = extractNumber(annuaire)
 
 indicatifs = {"77":"Orange","78":"Orange","70":"Expresso","75":"Promobile","76":"Free"}
 al = 0
@@ -78,7 +64,7 @@ for numero in liste_valid:
         elif numero[0:2] == '75':
             pro += 1
 
-for  i in range(0,cpt+1):
+for  i in range(0,annuaire+1):
     print (f"{liste_valid[i]}\t\t{liste_invalide[i]}")
 
 print(f"Orange: {al} - Free: {fr} - Expresso: {ex} - Promobile: {pro}")
