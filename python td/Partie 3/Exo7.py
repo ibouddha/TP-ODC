@@ -41,7 +41,7 @@ def getEquiv(caractere):
     }
     return lib.get(caractere)
 
-text  = "Bonjour aly, J’ai 17,5 en algo."
+text  = input("entrer un message:")
 crypto = ""
 
 for i in text.lower():

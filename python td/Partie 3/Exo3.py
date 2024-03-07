@@ -1,14 +1,5 @@
 #une phrase commence par une lettre majuscule et se termine par un point et ne contient pas de caractere special
 
-def estEnMajuscule(letters):
-    #list of capital letters
-    capital_letters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R','S', 'T','U', 'V', 'W', 'X', 'Y', 'Z']
-
-    if letters in capital_letters:
-        return True
-    else:
-        return False
-
 def del_space(phrase):
     # Params: phrase - string with spaces at the beginning and/or end.
     # Returns: string without leading or trailing space characters.
@@ -27,37 +18,26 @@ def del_space(phrase):
 
     return modified_sentence
 
-def extract(texte):
-    paragraph = []
-    phrase = ""
-    text_correct = ""
-    deb = True
-    for i in range(0,len(texte)):
-        if deb == False or texte[i] != " ":
-            phrase += texte[i]
-            deb = False
-            if texte[i] == ".":
-                paragraph.append(phrase)
-                phrase = ""
-                deb = True
+def estValide(phrase):
+    valid = True
+    if(len(phrase)<25): return False
+    for i in range(0, len(phrase)):
+        if (phrase[0].islower() or phrase[-1]!="."):
+            valid = False
+        else: 
+            valid = True
+
+    return valid
+
+
+nombre_phrase = input("donnez le nombre de phrase: ")
+paragraph = ""
+for i in range(int(nombre_phrase)) :
+    phrase=str(input("Donnez la phrase "+ str(i+1)+":"))
     
-    for text in paragraph:
-        if estEnMajuscule(text[0]):
-            text_correct += text
-
-    return text_correct
-
-
-phrase = input("text: ")
-
-paragraphs = extract(del_space(phrase))            
+    while not estValide(phrase):
+        print("La phrase doit commencer par une lettre majuscule et se terminer par un point et comporte au moins 25 caractères.")
+        phrase=input("Reessayez la phrase "+ str(i+1)+":")
     
-print(f"le texte correct est: \n{paragraphs}")
-
-# phrase1= "   je suis a dakar.  "
-# prase2=""
-# deb=True
-# pour p dans phrase:
-#     si p != " " ou deb =False :
-#         prase2 += p
-#         deb=false
+    paragraph += del_space(del_space(phrase)) + "\n"
+print(f"{paragraph}")
