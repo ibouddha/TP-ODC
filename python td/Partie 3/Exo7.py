@@ -41,13 +41,16 @@ def getEquiv(caractere):
     }
     return lib.get(caractere)
 
-text  = input("texto: ")
+text  = "Bonjour aly, J’ai 17,5 en algo."
 crypto = ""
 
-for i in text:
-    if len(crypto)>1 and getEquiv(i)[0] == crypto[-1] :
-        crypto+="0"+getEquiv(i)
+for i in text.lower():
+    if(i not in (",","'","’",";", ":", "!", "?", ".")):
+        if len(crypto)>1 and getEquiv(i)[0] == crypto[-1] :
+            crypto+="0"+getEquiv(i)
+        else:
+            crypto += getEquiv(i)
     else:
-        crypto += getEquiv(i)
+        crypto += i
 
 print(crypto)
