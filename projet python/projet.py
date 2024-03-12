@@ -1,5 +1,18 @@
+import csv
+from tabulate import tabulate
+
 #ouverture du fichier csv
-with open("./"
+with open("./projet python/Donnees_Projet_Python_Dev_Data.csv","r") as file:
+    reader = csv.DictReader(file, delimiter = ",") 
+    matrice = []
+    for ligne in reader:
+        if
+        matrice.append(ligne.values())
+    print(tabulate(matrice))
+    
+#lecture de la premiere ligne qui contient les titres des colonnes
+
+    
 #declaration des structures de données:
 #parcourir les fichiers
 #verifier les lignes valides et invalides
